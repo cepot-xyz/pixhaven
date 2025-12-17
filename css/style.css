@@ -327,7 +327,7 @@ p {
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease;
-    height: 200px;
+    aspect-ratio: 1 / 1;
     background-color: #f5f5f5;
     text-decoration: none;
     display: block;
@@ -689,8 +689,8 @@ p {
     align-items: center;
     gap: 8px;
     padding: 8px 16px;
-    background-color: #e9d5ff;
-    color: #7c3aed;
+    background-color: #c1e9e4;
+    color: #00796b;
     border: none;
     border-radius: 6px;
     font-size: 13px;
@@ -701,8 +701,8 @@ p {
 }
 
 .btn-new-event:hover {
-    background-color: #ddd6fe;
-    color: #6d28d9;
+    background-color: #a8ddd2;
+    color: #005a52;
 }
 
 /* ===== INBOX SECTION ===== */
@@ -2110,7 +2110,7 @@ p {
 
 .day:hover {
     border-color: #00a896;
-    background-color: #f0fffe;
+    background-color: #e8f5f3;
 }
 
 .day.other-month {
@@ -2988,14 +2988,14 @@ p {
 }
 
 .calendar-day.today {
-    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    background-color: #00a896;
     color: white;
-    border-color: #7c3aed;
+    border-color: #00a896;
     font-weight: 600;
 }
 
 .calendar-day.today:hover {
-    background: linear-gradient(135deg, #6d28d9 0%, #9333ea 100%);
+    background-color: #008879;
 }
 
 .calendar-day.has-event::after {
