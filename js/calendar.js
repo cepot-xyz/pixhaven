@@ -214,7 +214,6 @@ class CalendarManager {
                 <div class="event-time">${createdAt}</div>
             </div>
             <div class="event-actions">
-                <a href="#" class="action-link action-open">Buka</a>
                 <a href="#" class="action-link action-delete" data-storage-key="${event.storageKey}">Hapus</a>
             </div>
         `;
@@ -224,13 +223,6 @@ class CalendarManager {
         deleteBtn.addEventListener('click', (e) => {
             e.preventDefault();
             this.deleteEvent(event.storageKey);
-        });
-
-        // Open button handler (placeholder)
-        const openBtn = eventItem.querySelector('.action-open');
-        openBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            // Can be used for editing or viewing details
         });
 
         return eventItem;
