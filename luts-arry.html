@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixhaven - LUTS Library Arry</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">Pix<span class="logo-accent">haven</span></h1>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="index.html" class="menu-item" data-icon="home">
+                    <i class="menu-icon bi bi-house-fill"></i>
+                    <span class="menu-label">Beranda</span>
+                </a>
+                <a href="projek.html" class="menu-item" data-icon="project">
+                    <i class="menu-icon bi bi-folder-fill"></i>
+                    <span class="menu-label">Projek Saya</span>
+                </a>
+                <a href="dibagikan.html" class="menu-item" data-icon="share">
+                    <i class="menu-icon bi bi-people-fill"></i>
+                    <span class="menu-label">Dibagikan</span>
+                    <span class="menu-badge">1</span>
+                </a>
+                <a href="inbox.html" class="menu-item" data-icon="inbox">
+                    <i class="menu-icon bi bi-inbox-fill"></i>
+                    <span class="menu-label">Kotak Masuk</span>
+                    <span class="menu-badge">3</span>
+                </a>
+                <a href="kalender.html" class="menu-item" data-icon="calendar">
+                    <i class="menu-icon bi bi-calendar-event-fill"></i>
+                    <span class="menu-label">Kalender</span>
+                    <span class="menu-badge">2</span>
+                </a>
+                <a href="sampah.html" class="menu-item" data-icon="trash">
+                    <i class="menu-icon bi bi-trash-fill"></i>
+                    <span class="menu-label">Sampah</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <i class="user-icon bi bi-person-circle"></i>
+                    <span class="user-email">pixhaven@gmail.com</span>
+                </div>
+                <a href="pengaturan.html" class="footer-link">
+                    <i class="footer-icon bi bi-gear-fill"></i>
+                    <span>Pengaturan</span>
+                </a>
+                <a href="#" class="footer-link logout">
+                    <i class="footer-icon bi bi-box-arrow-right"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content luts-main">
+            <!-- Header with Back & Buttons -->
+            <div class="luts-header">
+                <a href="index.html" class="back-close-btn">
+                    <i class="bi bi-x-circle"></i>
+                    <span>Kembali</span>
+                </a>
+                <h2 class="luts-title">LUTS Template</h2>
+                <div class="luts-action-buttons">
+                    <button class="btn-luts btn-import">
+                        <i class="bi bi-download"></i>
+                        <span>Impor LUTS</span>
+                    </button>
+                    <button class="btn-luts btn-export">
+                        <i class="bi bi-upload"></i>
+                        <span>Ekspor</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Preview -->
+            <div class="luts-preview-section">
+                <img src="assets/images/Arry-LUTS/Arry Original.png" alt="Preview" id="lutsPreview" class="luts-preview-image">
+            </div>
+
+            <!-- LUTS Filters Grid -->
+            <div class="luts-filters-section">
+                <div class="luts-filters-grid">
+                    <!-- Original (Free) -->
+                    <button class="luts-filter-btn active" data-filter="Arry Original">
+                        <img src="assets/images/Arry-LUTS/Arry Original.png" alt="Original">
+                        <span class="luts-filter-name">Original</span>
+                        <i class="luts-check-icon bi bi-check-circle-fill"></i>
+                    </button>
+
+                    <!-- Harmony (Premium) -->
+                    <button class="luts-filter-btn premium" data-filter="Arry Harmony">
+                        <img src="assets/images/Arry-LUTS/Arry Harmony.png" alt="Harmony">
+                        <span class="luts-filter-name">Harmony</span>
+                        <svg class="luts-crown-icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M12 2l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6l3-6z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Bright (Premium) -->
+                    <button class="luts-filter-btn premium" data-filter="Arry Bright">
+                        <img src="assets/images/Arry-LUTS/Arry Bright.png" alt="Bright">
+                        <span class="luts-filter-name">Bright</span>
+                        <svg class="luts-crown-icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M12 2l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6l3-6z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Contrast (Premium) -->
+                    <button class="luts-filter-btn premium" data-filter="Arry Contrast">
+                        <img src="assets/images/Arry-LUTS/Arry Contrast.png" alt="Contrast">
+                        <span class="luts-filter-name">Contrast</span>
+                        <svg class="luts-crown-icon" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M12 2l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6l3-6z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Forest (Free) -->
+                    <button class="luts-filter-btn" data-filter="Arry Forest">
+                        <img src="assets/images/Arry-LUTS/Arry Forest.png" alt="Forest">
+                        <span class="luts-filter-name">Forest</span>
+                    </button>
+
+                    <!-- Autumn (Free) -->
+                    <button class="luts-filter-btn" data-filter="Arry Autumn">
+                        <img src="assets/images/Arry-LUTS/Arry Autumn.png" alt="Autumn">
+                        <span class="luts-filter-name">Autumn</span>
+                    </button>
+
+                    <!-- Action (Free) -->
+                    <button class="luts-filter-btn" data-filter="Arry Action">
+                        <img src="assets/images/Arry-LUTS/Arry Action.png" alt="Action">
+                        <span class="luts-filter-name">Action</span>
+                    </button>
+
+                    <!-- Ancient (Free) -->
+                    <button class="luts-filter-btn" data-filter="Arry Ancient">
+                        <img src="assets/images/Arry-LUTS/Arry Ancient.png" alt="Ancient">
+                        <span class="luts-filter-name">Ancient</span>
+                    </button>
+
+                    <!-- Moss (Free) -->
+                    <button class="luts-filter-btn" data-filter="Arry Moss">
+                        <img src="assets/images/Arry-LUTS/Arry Moss.png" alt="Moss">
+                        <span class="luts-filter-name">Moss</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Notification Modal -->
+    <div class="notification-modal" id="notificationModal">
+        <div class="notification-content">
+            <div class="notification-icon">
+                <i class="bi bi-check-circle"></i>
+            </div>
+            <p class="notification-message" id="notificationMessage">Foto di ekspor</p>
+        </div>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+    <div class="logout-modal" id="logoutModal">
+        <div class="logout-modal-content">
+            <h3 class="logout-modal-title">Logout dari akun?</h3>
+            <div class="logout-modal-actions">
+                <a href="#" class="logout-confirm-btn">Konfirmasi</a>
+                <a href="#" class="logout-cancel-btn">Batal</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Features Modal -->
+    <div class="premium-modal" id="premiumModal">
+        <div class="premium-modal-overlay"></div>
+        <div class="premium-modal-content">
+            <button class="premium-modal-close" id="premiumModalClose">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <h2 class="premium-modal-title">Akses Fitur Premium!</h2>
+            <p class="premium-modal-subtitle">Buka semua alat dan pembaruan eksklusif</p>
+            
+            <div class="premium-cards-container">
+                <!-- Basic Card -->
+                <div class="premium-card basic-card">
+                    <h3 class="premium-card-title">Basic</h3>
+                    <p class="premium-card-desc">Gratis Selamanya</p>
+                    <div class="premium-card-price">Gratis</div>
+                    <ul class="premium-card-features">
+                        <li>Semua fitur utama</li>
+                        <li>Akses tanpa batas waktu</li>
+                        <li>Update reguler</li>
+                    </ul>
+                    <button class="premium-card-btn premium-btn-basic">Saat ini</button>
+                </div>
+
+                <!-- Bulanan Card (with subtle animation) -->
+                <div class="premium-card bulanan-card">
+                    <div class="premium-badge">Most Popular!</div>
+                    <h3 class="premium-card-title">Bulanan</h3>
+                    <p class="premium-card-desc"></p>
+                    <div class="premium-card-price">
+                        <span class="price-amount">45K</span>
+                        <span class="price-currency">IDR</span>
+                        <span class="price-period">per bulan</span>
+                    </div>
+                    <ul class="premium-card-features">
+                        <li>Semua fitur + update terbaru</li>
+                        <li>Pembayaran fleksibel per bulan</li>
+                        <li>Cocok untuk uji coba jangka pendek</li>
+                    </ul>
+                    <button class="premium-card-btn premium-btn-bulanan">Langganan</button>
+                </div>
+
+                <!-- Lifetime Card (with glow and animation) -->
+                <div class="premium-card lifetime-card">
+                    <div class="premium-badge recommended">Recommended!</div>
+                    <h3 class="premium-card-title">Lifetime</h3>
+                    <p class="premium-card-desc"></p>
+                    <div class="premium-card-price">
+                        <span class="price-amount">100K</span>
+                        <span class="price-currency">IDR</span>
+                        <span class="price-period">One-Time Purchase</span>
+                    </div>
+                    <ul class="premium-card-features">
+                        <li>Bayar sekali, akses selamanya</li>
+                        <li>Termasuk semua update masa depan</li>
+                    </ul>
+                    <button class="premium-card-btn premium-btn-lifetime">Beli Lifetime</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/luts.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixhaven - Kotak Masuk</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">Pix<span class="logo-accent">haven</span></h1>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="index.html" class="menu-item" data-icon="home">
+                    <i class="menu-icon bi bi-house-fill"></i>
+                    <span class="menu-label">Beranda</span>
+                </a>
+                <a href="projek.html" class="menu-item" data-icon="project">
+                    <i class="menu-icon bi bi-folder-fill"></i>
+                    <span class="menu-label">Projek Saya</span>
+                </a>
+                <a href="dibagikan.html" class="menu-item" data-icon="share">
+                    <i class="menu-icon bi bi-people-fill"></i>
+                    <span class="menu-label">Dibagikan</span>
+                    <span class="menu-badge">1</span>
+                </a>
+                <a href="inbox.html" class="menu-item active" data-icon="inbox">
+                    <i class="menu-icon bi bi-inbox-fill"></i>
+                    <span class="menu-label">Kotak Masuk</span>
+                    <span class="menu-badge">3</span>
+                </a>
+                <a href="kalender.html" class="menu-item" data-icon="calendar">
+                    <i class="menu-icon bi bi-calendar-event-fill"></i>
+                    <span class="menu-label">Kalender</span>
+                    <span class="menu-badge">2</span>
+                </a>
+                <a href="sampah.html" class="menu-item" data-icon="trash">
+                    <i class="menu-icon bi bi-trash-fill"></i>
+                    <span class="menu-label">Sampah</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <i class="user-icon bi bi-person-circle"></i>
+                    <span class="user-email">pixhaven@gmail.com</span>
+                </div>
+                <a href="pengaturan.html" class="footer-link">
+                    <i class="footer-icon bi bi-gear-fill"></i>
+                    <span>Pengaturan</span>
+                </a>
+                <a href="#" class="footer-link logout">
+                    <i class="footer-icon bi bi-box-arrow-right"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Search Bar with Back -->
+            <div class="search-bar-with-back">
+                <a href="index.html" class="back-close-btn">
+                    <i class="bi bi-x-circle"></i>
+                    <span>Kembali</span>
+                </a>
+                <input type="text" class="search-input" placeholder="Cari...">
+            </div>
+
+            <!-- Page Header with Title and Action -->
+            <div class="page-header-with-action">
+                <h2 class="page-title">Kotak Masuk</h2>
+                <button class="btn-new-message">
+                    <span>Pesan baru</span>
+                </button>
+            </div>
+
+            <!-- Inbox Items Section -->
+            <section class="inbox-section">
+                <!-- Static Inbox Items -->
+                <div id="staticInboxItems">
+                    <!-- Inbox Item 1 - Shared Files -->
+                    <div class="inbox-item">
+                        <div class="inbox-item-header">
+                            <div class="inbox-item-info">
+                                <img src="assets/images/Azalea Profile.png" alt="Azalea" class="inbox-user-avatar">
+                                <div class="inbox-item-text">
+                                    <h3 class="inbox-item-title">
+                                        <strong>Azalea</strong> mengirimkan lampiran baru <strong>(6 file)</strong>
+                                    </h3>
+                                    <p class="inbox-item-subtitle">Buka atau hapus lampiran</p>
+                                </div>
+                            </div>
+                            <div class="inbox-item-time">34 menit yang lalu</div>
+                        </div>
+                        <div class="inbox-item-actions">
+                            <a href="#" class="action-link action-open">Buka</a>
+                            <a href="#" class="action-link action-delete">Hapus</a>
+                        </div>
+                    </div>
+
+                    <!-- Inbox Item 2 - Reminder -->
+                    <div class="inbox-item">
+                        <div class="inbox-item-header">
+                            <div class="inbox-item-info">
+                                <div class="inbox-icon-placeholder reminder">
+                                    <i class="bi bi-briefcase-fill"></i>
+                                </div>
+                                <div class="inbox-item-text">
+                                    <h3 class="inbox-item-title">
+                                        <strong>Pengingat</strong> Besok pukul 07.30 WIB, job di Highest STUCO 2025
+                                    </h3>
+                                    <p class="inbox-item-subtitle">Jangan lupa deadline project</p>
+                                </div>
+                            </div>
+                            <div class="inbox-item-time">14 menit yang lalu</div>
+                        </div>
+                        <div class="inbox-item-actions">
+                            <a href="#" class="action-link action-open">Buka</a>
+                            <a href="#" class="action-link action-delete">Hapus</a>
+                        </div>
+                    </div>
+
+                    <!-- Inbox Item 3 - Reminder -->
+                    <div class="inbox-item">
+                        <div class="inbox-item-header">
+                            <div class="inbox-item-info">
+                                <div class="inbox-icon-placeholder reminder">
+                                    <i class="bi bi-briefcase-fill"></i>
+                                </div>
+                                <div class="inbox-item-text">
+                                    <h3 class="inbox-item-title">
+                                        <strong>Pengingat</strong> Malam ini pukul 23.59 WIB, Submit refined file ke client
+                                    </h3>
+                                    <p class="inbox-item-subtitle">Deadline hari ini, jangan telat</p>
+                                </div>
+                            </div>
+                            <div class="inbox-item-time">2 menit yang lalu</div>
+                        </div>
+                        <div class="inbox-item-actions">
+                            <a href="#" class="action-link action-open">Buka</a>
+                            <a href="#" class="action-link action-delete">Hapus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar Reminders Container -->
+                <div id="calendarRemindersContainer">
+                    <!-- Calendar reminders will be loaded here by JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+    <div class="logout-modal" id="logoutModal">
+        <div class="logout-modal-content">
+            <h3 class="logout-modal-title">Logout dari akun?</h3>
+            <div class="logout-modal-actions">
+                <a href="#" class="logout-confirm-btn">Konfirmasi</a>
+                <a href="#" class="logout-cancel-btn">Batal</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/inbox.js"></script>
+</body>
+</html>

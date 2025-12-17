@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixhaven - Image Editing Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">Pix<span class="logo-accent">haven</span></h1>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="index.html" class="menu-item active" data-icon="home">
+                    <i class="menu-icon bi bi-house-fill"></i>
+                    <span class="menu-label">Beranda</span>
+                </a>
+                <a href="projek.html" class="menu-item" data-icon="project">
+                    <i class="menu-icon bi bi-folder-fill"></i>
+                    <span class="menu-label">Projek Saya</span>
+                </a>
+                <a href="dibagikan.html" class="menu-item" data-icon="share">
+                    <i class="menu-icon bi bi-people-fill"></i>
+                    <span class="menu-label">Dibagikan</span>
+                    <span class="menu-badge">1</span>
+                </a>
+                <a href="inbox.html" class="menu-item" data-icon="inbox">
+                    <i class="menu-icon bi bi-inbox-fill"></i>
+                    <span class="menu-label">Kotak Masuk</span>
+                    <span class="menu-badge">3</span>
+                </a>
+                <a href="kalender.html" class="menu-item" data-icon="calendar">
+                    <i class="menu-icon bi bi-calendar-event-fill"></i>
+                    <span class="menu-label">Kalender</span>
+                    <span class="menu-badge">2</span>
+                </a>
+                <a href="sampah.html" class="menu-item" data-icon="trash">
+                    <i class="menu-icon bi bi-trash-fill"></i>
+                    <span class="menu-label">Sampah</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <i class="user-icon bi bi-person-circle"></i>
+                    <span class="user-email">pixhaven@gmail.com</span>
+                </div>
+                <a href="pengaturan.html" class="footer-link">
+                    <i class="footer-icon bi bi-gear-fill"></i>
+                    <span>Pengaturan</span>
+                </a>
+                <a href="#" class="footer-link logout">
+                    <i class="footer-icon bi bi-box-arrow-right"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Cari...">
+            </div>
+
+            <!-- Hero Banner -->
+            <section class="hero-banner">
+                <div class="hero-content">
+                    <h2 class="hero-title">Pixhaven v2 Telah Rilis!</h2>
+                    <p class="hero-description">
+                        Pixhaven kini tampil lebih modern dan fokus pada pengalaman pengguna. Versi desktop ini menghadirkan kurva editor baru, menghapus fitur AI Face Recognition, serta menghadirkan performa lebih stabil dan bebas lag.
+                    </p>
+                    <button class="btn-primary">
+                        <i class="btn-icon bi bi-check-circle-fill"></i>
+                        Pelajari Selengkapnya
+                    </button>
+                </div>
+            </section>
+
+            <!-- Kit Fotografer Section -->
+            <section class="section">
+                <h3 class="section-title">Kit Fotografer</h3>
+                <div class="cards-grid">
+                    <a href="sorter.html" class="card">
+                        <img src="assets/images/Photo Sorter.png" alt="Photo Sorter">
+                        <span class="card-label">Photo Sorter</span>
+                    </a>
+                    <a href="luts-azalea.html" class="card">
+                        <img src="assets/images/LUTS Library.png" alt="LUTS Library">
+                        <span class="card-label">LUTS Library</span>
+                    </a>
+                    <a href="adjustment.html" class="card">
+                        <img src="assets/images/Basic Adjustment.png" alt="Basic Adjustment">
+                        <span class="card-label">Basic Adjustment</span>
+                    </a>
+                    <a href="curve.html" class="card">
+                        <img src="assets/images/Color Curves.png" alt="Color Curves">
+                        <span class="card-label">Color Curves</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Terakhir Dibuka Section -->
+            <section class="section">
+                <h3 class="section-title">Terakhir Dibuka</h3>
+                <div class="cards-grid">
+                    <a href="#" class="card">
+                        <img src="assets/images/Azalea's Villa.png" alt="Azalea's Villa">
+                        <span class="card-label">Azalea's Villa</span>
+                    </a>
+                    <a href="#" class="card">
+                        <img src="assets/images/Arry's Cafee Shot.png" alt="Arry's Cafee Shot">
+                        <span class="card-label">Arry's Cafee Shot</span>
+                    </a>
+                    <a href="#" class="card">
+                        <img src="assets/images/Siska's Night Club.png" alt="Siska's Night Club">
+                        <span class="card-label">Siska's Night Club</span>
+                    </a>
+                    <a href="#" class="card">
+                        <img src="assets/images/Azalea's Villa.png" alt="Lihat Semua">
+                        <span class="card-label">Lihat Semua</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+    <div class="logout-modal" id="logoutModal">
+        <div class="logout-modal-content">
+            <h3 class="logout-modal-title">Logout dari akun?</h3>
+            <div class="logout-modal-actions">
+                <a href="#" class="logout-confirm-btn">Konfirmasi</a>
+                <a href="#" class="logout-cancel-btn">Batal</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Changelog Modal -->
+    <div class="changelog-modal" id="changelogModal">
+        <div class="changelog-modal-content">
+            <h2 class="changelog-title">A Better Pixhaven, Just for You.</h2>
+            
+            <p class="changelog-subtitle">
+                Versi terbaru ini membawa tampilan yang lebih modern, ringan, dan responsif, menghadirkan pengalaman pengelolaaan foto yang lebih cepat, stabil, dan intuitif dibanding versi sebelumnya.
+            </p>
+            
+            <ul class="changelog-list">
+                <li>Antarmuka baru lebih clean, modern, dan konsisten.</li>
+                <li>Workflow diperbaharui untuk navigasi dan manajemen proyek lebih efisien.</li>
+                <li>Panel Kalender & Projek Saya mendapat peningkatan tampilan dan performa.</li>
+                <li>Photo Sorter kini mendukung Sort by Click (tanggal/nama file).</li>
+                <li>LUTS, Basic Adjustments & Color Curves kini bisa ekspor dan simpan preset.</li>
+                <li>Fitur Premium LUTS tersedia lewat sistem One-Time Purchase.</li>
+                <li>AI Face Recognition dihapus demi performa lebih optimal.</li>
+                <li>Kembali hadir versi Desktop Web dengan pengalaman multi-lintas perangkat.</li>
+                <li>Performa sistem lebih cepat, stabil, dan bebas lag.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+</html>

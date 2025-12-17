@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixhaven - Photo Sorter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">Pix<span class="logo-accent">haven</span></h1>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="index.html" class="menu-item" data-icon="home">
+                    <i class="menu-icon bi bi-house-fill"></i>
+                    <span class="menu-label">Beranda</span>
+                </a>
+                <a href="projek.html" class="menu-item" data-icon="project">
+                    <i class="menu-icon bi bi-folder-fill"></i>
+                    <span class="menu-label">Projek Saya</span>
+                </a>
+                <a href="dibagikan.html" class="menu-item" data-icon="share">
+                    <i class="menu-icon bi bi-people-fill"></i>
+                    <span class="menu-label">Dibagikan</span>
+                    <span class="menu-badge">1</span>
+                </a>
+                <a href="inbox.html" class="menu-item" data-icon="inbox">
+                    <i class="menu-icon bi bi-inbox-fill"></i>
+                    <span class="menu-label">Kotak Masuk</span>
+                    <span class="menu-badge">3</span>
+                </a>
+                <a href="kalender.html" class="menu-item" data-icon="calendar">
+                    <i class="menu-icon bi bi-calendar-event-fill"></i>
+                    <span class="menu-label">Kalender</span>
+                    <span class="menu-badge">2</span>
+                </a>
+                <a href="sampah.html" class="menu-item" data-icon="trash">
+                    <i class="menu-icon bi bi-trash-fill"></i>
+                    <span class="menu-label">Sampah</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <i class="user-icon bi bi-person-circle"></i>
+                    <span class="user-email">pixhaven@gmail.com</span>
+                </div>
+                <a href="pengaturan.html" class="footer-link">
+                    <i class="footer-icon bi bi-gear-fill"></i>
+                    <span>Pengaturan</span>
+                </a>
+                <a href="#" class="footer-link logout">
+                    <i class="footer-icon bi bi-door-left"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Back and Search Bar -->
+            <div class="search-bar-with-back">
+                <a href="index.html" class="back-close-btn">
+                    <i class="bi bi-x-circle"></i>
+                    <span>Kembali</span>
+                </a>
+                <input type="text" class="search-input" placeholder="Cari...">
+            </div>
+
+            <!-- Page Title -->
+            <div class="page-title-section">
+                <h2 class="page-title">Photo Sorter – Sort by Click</h2>
+            </div>
+
+            <!-- Sorter Container -->
+            <div class="sorter-container">
+                <!-- Left Section: Files/Folders Grid -->
+                <section class="sorter-main">
+                    <!-- Folder Picker Section -->
+                    <div class="folder-picker-section">
+                        <button class="btn-pick-folder" id="pickFolderBtn">
+                            <i class="bi bi-folder-check"></i>
+                            <span>Pilih Folder Lokal</span>
+                        </button>
+                        <input type="file" id="folderInput" webkitdirectory mozdirectory multiple style="display: none;">
+                        
+                        <!-- Breadcrumb Navigation -->
+                        <div class="breadcrumb-nav" id="breadcrumbNav" style="display: none;">
+                            <button class="breadcrumb-item active" data-path="">
+                                <i class="bi bi-folder"></i>
+                                <span>Root</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Sort Mode Buttons -->
+                    <div class="sort-mode-buttons" id="sortModeSection" style="display: none;">
+                        <button class="sort-mode-btn active" data-mode="click">
+                            <i class="bi bi-cursor-fill"></i>
+                            <span>Mode Sort-by-Click</span>
+                        </button>
+                        <button class="sort-mode-btn" data-mode="name">
+                            <i class="bi bi-sort-alpha-down"></i>
+                            <span>Sort by name</span>
+                        </button>
+                        <button class="sort-mode-btn" data-mode="date">
+                            <i class="bi bi-sort-down-alt"></i>
+                            <span>Sort by date</span>
+                        </button>
+                    </div>
+
+                    <!-- Empty State -->
+                    <div class="empty-folder-state" id="emptyState" style="display: none;">
+                        <i class="bi bi-inbox"></i>
+                        <p>Folder kosong</p>
+                    </div>
+
+                    <!-- Files/Folders Grid -->
+                    <div class="sorter-grid" id="sorterGrid">
+                        <!-- Files will be populated by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Right Section: Action Buttons -->
+                <section class="sorter-actions">
+                    <h3 class="actions-title">Aksi</h3>
+                    
+                    <div class="action-buttons">
+                        <button class="action-btn action-create" id="moveToNewFolderBtn">
+                            <i class="bi bi-folder-plus"></i>
+                            <span>Pindahkan ke Folder Baru</span>
+                        </button>
+
+                        <button class="action-btn action-delete" id="deleteFileBtn">
+                            <i class="bi bi-trash3"></i>
+                            <span>Hapus file</span>
+                        </button>
+                    </div>
+
+                    <!-- Dynamic Folder Buttons -->
+                    <div class="dynamic-folder-buttons" id="dynamicFolderButtons">
+                        <!-- Dynamic buttons will be added here -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Create Folder Modal -->
+    <div class="sorter-modal" id="createFolderModal">
+        <div class="sorter-modal-content">
+            <h3 class="sorter-modal-title">Buat Folder Baru</h3>
+            <input type="text" id="folderNameInput" class="folder-input" placeholder="Nama folder...">
+            <div class="sorter-modal-actions">
+                <button class="btn-create" id="confirmCreateBtn">Buat</button>
+                <button class="btn-cancel" id="cancelCreateBtn">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Move to Folder Modal -->
+    <div class="sorter-modal" id="moveToFolderModal">
+        <div class="sorter-modal-content">
+            <h3 class="sorter-modal-title">Pindahkan ke Folder Baru</h3>
+            <p class="sorter-modal-description" id="moveFileCount">Akan memindahkan 1 file</p>
+            <input type="text" id="moveToFolderInput" class="folder-input" placeholder="Nama folder tujuan...">
+            <div class="sorter-modal-actions">
+                <button class="btn-create" id="confirmMoveBtn">Pindahkan</button>
+                <button class="btn-cancel" id="cancelMoveBtn">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="sorter-modal" id="deleteConfirmModal">
+        <div class="sorter-modal-content">
+            <h3 class="sorter-modal-title">Konfirmasi Hapus</h3>
+            <p class="sorter-modal-description">Anda yakin ingin menghapus item ini?</p>
+            <p class="sorter-modal-warning" id="deleteWarning">File akan disembunyikan dari preview (tidak akan dihapus secara permanen).</p>
+            <div class="sorter-modal-actions">
+                <button class="btn-delete" id="confirmDeleteBtn">Hapus</button>
+                <button class="btn-cancel" id="cancelDeleteBtn">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+    <div class="logout-modal" id="logoutModal">
+        <div class="logout-modal-content">
+            <h3 class="logout-modal-title">Logout dari akun?</h3>
+            <div class="logout-modal-actions">
+                <a href="#" class="logout-confirm-btn">Konfirmasi</a>
+                <a href="#" class="logout-cancel-btn">Batal</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/sorter.js"></script>
+</body>
+</html>

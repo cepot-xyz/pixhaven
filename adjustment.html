@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixhaven - Adjustment</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">Pix<span class="logo-accent">haven</span></h1>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="index.html" class="menu-item" data-icon="home">
+                    <i class="menu-icon bi bi-house-fill"></i>
+                    <span class="menu-label">Beranda</span>
+                </a>
+                <a href="projek.html" class="menu-item active" data-icon="project">
+                    <i class="menu-icon bi bi-folder-fill"></i>
+                    <span class="menu-label">Projek Saya</span>
+                </a>
+                <a href="dibagikan.html" class="menu-item" data-icon="share">
+                    <i class="menu-icon bi bi-people-fill"></i>
+                    <span class="menu-label">Dibagikan</span>
+                    <span class="menu-badge">1</span>
+                </a>
+                <a href="inbox.html" class="menu-item" data-icon="inbox">
+                    <i class="menu-icon bi bi-inbox-fill"></i>
+                    <span class="menu-label">Kotak Masuk</span>
+                    <span class="menu-badge">3</span>
+                </a>
+                <a href="kalender.html" class="menu-item" data-icon="calendar">
+                    <i class="menu-icon bi bi-calendar-event-fill"></i>
+                    <span class="menu-label">Kalender</span>
+                    <span class="menu-badge">2</span>
+                </a>
+                <a href="sampah.html" class="menu-item" data-icon="trash">
+                    <i class="menu-icon bi bi-trash-fill"></i>
+                    <span class="menu-label">Sampah</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <i class="user-icon bi bi-person-circle"></i>
+                    <span class="user-email">pixhaven@gmail.com</span>
+                </div>
+                <a href="pengaturan.html" class="footer-link">
+                    <i class="footer-icon bi bi-gear-fill"></i>
+                    <span>Pengaturan</span>
+                </a>
+                <a href="#" class="footer-link logout">
+                    <i class="footer-icon bi bi-door-left"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content adjustment-main">
+            <!-- Back Button -->
+            <div class="adjustment-header">
+                <a href="projek.html" class="back-close-btn">
+                    <i class="bi bi-x-circle"></i>
+                    <span>Kembali</span>
+                </a>
+            </div>
+
+            <!-- Adjustment Container -->
+            <div class="adjustment-container">
+                <!-- Preview Section -->
+                <div class="adjustment-preview-section">
+                    <!-- Action Buttons -->
+                    <div class="adjustment-buttons">
+                        <button class="btn-adjustment btn-load">
+                            <span>Muat Konfigurasi</span>
+                        </button>
+                        <button class="btn-adjustment btn-save">
+                            <i class="bi bi-download"></i>
+                            <span>Simpan Konfigurasi Saat Ini</span>
+                        </button>
+                        <button class="btn-adjustment btn-export">
+                            <i class="bi bi-upload"></i>
+                            <span>Ekspor</span>
+                        </button>
+                    </div>
+
+                    <!-- Canvas Preview -->
+                    <div class="preview-canvas-wrapper" id="canvasWrapper">
+                        <canvas id="previewCanvas" class="preview-canvas"></canvas>
+                        <div class="canvas-upload-hint" id="uploadHint">
+                            <i class="bi bi-cloud-upload"></i>
+                            <p>Klik atau drag file gambar ke sini</p>
+                        </div>
+                    </div>
+
+                    <!-- Hidden File Input -->
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                </div>
+
+                <!-- Controls Section -->
+                <div class="adjustment-controls-section">
+                    <!-- Exposure Slider -->
+                    <div class="adjustment-control">
+                        <div class="control-header">
+                            <label class="control-label">Eksposure</label>
+                            <div class="control-value">
+                                <input type="number" class="value-input" id="exposureValue" value="0" min="-100" max="100">
+                            </div>
+                        </div>
+                        <input type="range" class="slider" id="exposureSlider" min="-100" max="100" value="0">
+                    </div>
+
+                    <!-- Contrast Slider -->
+                    <div class="adjustment-control">
+                        <div class="control-header">
+                            <label class="control-label">Kontras</label>
+                            <div class="control-value">
+                                <input type="number" class="value-input" id="contrastValue" value="0" min="-100" max="100">
+                            </div>
+                        </div>
+                        <input type="range" class="slider" id="contrastSlider" min="-100" max="100" value="0">
+                    </div>
+
+                    <!-- Saturation Slider -->
+                    <div class="adjustment-control">
+                        <div class="control-header">
+                            <label class="control-label">Saturasi</label>
+                            <div class="control-value">
+                                <input type="number" class="value-input" id="saturationValue" value="0" min="-100" max="100">
+                            </div>
+                        </div>
+                        <input type="range" class="slider" id="saturationSlider" min="-100" max="100" value="0">
+                    </div>
+
+                    <!-- Tint Slider -->
+                    <div class="adjustment-control">
+                        <div class="control-header">
+                            <label class="control-label">Tint</label>
+                            <div class="control-value">
+                                <input type="number" class="value-input" id="tintValue" value="0" min="-100" max="100">
+                            </div>
+                        </div>
+                        <input type="range" class="slider" id="tintSlider" min="-100" max="100" value="0">
+                    </div>
+
+                    <!-- Temperature Slider -->
+                    <div class="adjustment-control">
+                        <div class="control-header">
+                            <label class="control-label">Suhu</label>
+                            <div class="control-value">
+                                <input type="number" class="value-input" id="temperatureValue" value="0" min="-100" max="100">
+                            </div>
+                        </div>
+                        <input type="range" class="slider" id="temperatureSlider" min="-100" max="100" value="0">
+                    </div>
+
+                    <!-- Sharpen Slider -->
+                    <div class="adjustment-control">
+                        <div class="control-header">
+                            <label class="control-label">Sharpen</label>
+                            <div class="control-value">
+                                <input type="number" class="value-input" id="sharpenValue" value="0" min="0" max="100">
+                            </div>
+                        </div>
+                        <input type="range" class="slider" id="sharpenSlider" min="0" max="100" value="0">
+                    </div>
+
+                    <!-- Highlight Slider -->
+                    <div class="adjustment-control">
+                        <div class="control-header">
+                            <label class="control-label">Highlight</label>
+                            <div class="control-value">
+                                <input type="number" class="value-input" id="highlightValue" value="0" min="-100" max="100">
+                            </div>
+                        </div>
+                        <input type="range" class="slider" id="highlightSlider" min="-100" max="100" value="0">
+                    </div>
+
+                    <!-- Shadow Slider -->
+                    <div class="adjustment-control">
+                        <div class="control-header">
+                            <label class="control-label">Shadow</label>
+                            <div class="control-value">
+                                <input type="number" class="value-input" id="shadowValue" value="0" min="-100" max="100">
+                            </div>
+                        </div>
+                        <input type="range" class="slider" id="shadowSlider" min="-100" max="100" value="0">
+                    </div>
+
+                    <!-- Black Slider -->
+                    <div class="adjustment-control">
+                        <div class="control-header">
+                            <label class="control-label">Black</label>
+                            <div class="control-value">
+                                <input type="number" class="value-input" id="blackValue" value="0" min="-100" max="100">
+                            </div>
+                        </div>
+                        <input type="range" class="slider" id="blackSlider" min="-100" max="100" value="0">
+                    </div>
+
+                    <!-- White Slider -->
+                    <div class="adjustment-control">
+                        <div class="control-header">
+                            <label class="control-label">White</label>
+                            <div class="control-value">
+                                <input type="number" class="value-input" id="whiteValue" value="0" min="-100" max="100">
+                            </div>
+                        </div>
+                        <input type="range" class="slider" id="whiteSlider" min="-100" max="100" value="0">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Notification Modal -->
+    <div class="notification-modal" id="notificationModal">
+        <div class="notification-content">
+            <div class="notification-icon">
+                <i class="bi bi-check-circle"></i>
+            </div>
+            <p class="notification-message" id="notificationMessage">Konfigurasi Tersimpan!</p>
+        </div>
+    </div>
+
+    <!-- Save Configuration Modal -->
+    <div class="preset-modal" id="saveConfigModal">
+        <div class="preset-modal-content">
+            <h3 class="preset-modal-title">Simpan Konfigurasi Baru</h3>
+            <input type="text" id="configNameInput" class="preset-input" placeholder="Nama konfigurasi..." maxlength="50">
+            <div class="preset-modal-actions">
+                <button class="btn-modal-confirm" id="confirmSaveConfigBtn">Simpan</button>
+                <button class="btn-modal-cancel" id="cancelSaveConfigBtn">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load Configuration Modal -->
+    <div class="preset-modal" id="loadConfigModal">
+        <div class="preset-modal-content">
+            <h3 class="preset-modal-title">Muat Konfigurasi</h3>
+            <div class="preset-list" id="configList">
+                <!-- Configurations will be listed here -->
+            </div>
+            <div class="preset-modal-actions">
+                <button class="btn-modal-cancel" id="cancelLoadConfigBtn">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+    <div class="logout-modal" id="logoutModal">
+        <div class="logout-modal-content">
+            <h3 class="logout-modal-title">Logout dari akun?</h3>
+            <div class="logout-modal-actions">
+                <a href="#" class="logout-confirm-btn">Konfirmasi</a>
+                <a href="#" class="logout-cancel-btn">Batal</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/adjustment.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+</html>
