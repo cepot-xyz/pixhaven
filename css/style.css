@@ -577,31 +577,35 @@ p {
     text-decoration: none;
     font-size: 13px;
     font-family: 'Albert Sans', sans-serif;
-    padding: 6px 14px;
+    padding: 10px 18px;
     border-radius: 6px;
     transition: all 0.2s ease;
     cursor: pointer;
     white-space: nowrap;
+    border: none;
+    font-weight: 600;
 }
 
 .action-open {
-    color: #00a896;
-    border: 1px solid #00a896;
-}
-
-.action-open:hover {
     background-color: #00a896;
     color: white;
 }
 
+.action-open:hover {
+    background-color: #008876;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 168, 150, 0.3);
+}
+
 .action-delete {
-    color: #d9534f;
-    border: 1px solid #d9534f;
+    background-color: #ff4757;
+    color: white;
 }
 
 .action-delete:hover {
-    background-color: #d9534f;
-    color: white;
+    background-color: #ff3838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
 }
 
 /* ===== SHARED GALLERY ===== */
@@ -804,35 +808,36 @@ p {
 
 .action-link {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
     font-family: 'Albert Sans', sans-serif;
-    padding: 5px 10px;
-    border-radius: 4px;
+    padding: 10px 18px;
+    border-radius: 6px;
     transition: all 0.2s ease;
     cursor: pointer;
-    border: 1px solid;
+    border: none;
+    font-weight: 600;
 }
 
 .action-open {
-    color: #00a896;
-    border-color: #00a896;
-    background-color: rgba(0, 168, 150, 0.05);
-}
-
-.action-open:hover {
     background-color: #00a896;
     color: white;
 }
 
+.action-open:hover {
+    background-color: #008876;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 168, 150, 0.3);
+}
+
 .action-delete {
-    color: #d9534f;
-    border-color: #d9534f;
-    background-color: rgba(217, 83, 79, 0.05);
+    background-color: #ff4757;
+    color: white;
 }
 
 .action-delete:hover {
-    background-color: #d9534f;
-    color: white;
+    background-color: #ff3838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
 }
 
 /* ===== SETTINGS SECTION ===== */
@@ -2189,7 +2194,8 @@ p {
 }
 
 .event-icon-placeholder.reminder {
-    background-color: #8fd9c8;
+    background-color: #00a896;
+    color: white;
 }
 
 .event-text {
@@ -3026,8 +3032,8 @@ p {
     gap: 12px;
     padding: 16px;
     border-radius: 8px;
-    background: linear-gradient(135deg, #f8f3ff 0%, #ede9fe 100%);
-    border-left: 4px solid #a855f7;
+    background: linear-gradient(135deg, #e8f5f3 0%, #d4ede9 100%);
+    border-left: 4px solid #00a896;
     margin-bottom: 12px;
     transition: all 0.2s ease;
 }
@@ -3037,7 +3043,7 @@ p {
 }
 
 .event-item:hover {
-    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 168, 150, 0.15);
 }
 
 .event-header {
@@ -3064,7 +3070,7 @@ p {
 }
 
 .event-icon-placeholder.reminder {
-    background: linear-gradient(135deg, #e879f9 0%, #d946ef 100%);
+    background: linear-gradient(135deg, #00a896 0%, #1ab394 100%);
     color: white;
     font-size: 18px;
 }
@@ -3082,7 +3088,7 @@ p {
 }
 
 .event-title strong {
-    color: #a855f7;
+    color: #00a896;
     font-weight: 600;
 }
 
@@ -3105,20 +3111,39 @@ p {
 }
 
 .action-link {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
-    color: #0b6fb3;
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
     transition: all 0.2s ease;
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.action-link:hover {
-    color: #084c7f;
+.action-link.action-open {
+    background-color: #00a896;
+    color: white;
+}
+
+.action-link.action-open:hover {
+    background-color: #008876;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 168, 150, 0.3);
+}
+
+.action-link.action-delete {
+    background-color: #ff4757;
+    color: white;
 }
 
 .action-link.action-delete:hover {
-    color: #dc2626;
+    background-color: #ff3838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
 }
 
 .empty-events-message {
